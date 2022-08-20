@@ -19,6 +19,6 @@ if [ "$OSTYPE" == "win32" ]; then
         curl --silent -O https://raw.githubusercontent.com/hugo-berendi/setup/main/windows/windows.bat && ./windows.bat
 fi
 
-if [ "$OSTYPE" == "freebsd"* ]; then
+if [ "$OSTYPE" == "freebsd"* ]; then 
         echo "There is no FreeBSD support yet."
 fi
