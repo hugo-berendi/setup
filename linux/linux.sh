@@ -4,6 +4,9 @@
 
 sudo apt-get install build-essential
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# set path for brew
+
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.bash_profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
@@ -14,7 +17,7 @@ brew install gh
 brew install fish
 brew install neovim
 brew install tmux
-brew install node
+brew install nvm
 brew install vcprompt
 brew install fortune
 brew install cowsay
@@ -25,16 +28,31 @@ brew install youtube-dl
 brew install ghq
 brew install peco
 
+# set path for nvm
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# install node
+
+nvm install 18
+nvm install 16
+nvm use 18
+
+# install npm packages
+
+npm install -g npm@latest
+npm install -g yarn typescript eslint ts-node lite-server gitignore license
+
 # set fish as default shell
 
-$fish_path = $(which fish)
-
-sudo echo $fish_path >> /etc/shells
-chsh -s $fish_path
+sudo echo /usr/local/bin/fish >> /etc/shells
+chsh -s /usr/local/bin/fish
 
 # install fisher and set it up
 
-curl -sL -O https://git.io/fisher | source fisher.fish && fisher install jorgebucaran/fisher
+curl -O https://raw.githubusercontent.com/jorgebucaran/fisher/HEAD/functions/fisher.fish | source fisher.fish && fisher install jorgebucaran/fisher
 fisher install jethrokuan/z
 
 # install nerd font
