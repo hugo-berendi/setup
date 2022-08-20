@@ -25,6 +25,13 @@ brew install youtube-dl
 brew install ghq
 brew install peco
 
+# set fish as default shell
+
+$fish_path = $(which fish)
+
+sudo echo $fish_path >> /etc/shells
+chsh -s $fish_path
+
 # install fisher and set it up
 
 curl -sL -O https://git.io/fisher | source fisher.fish && fisher install jorgebucaran/fisher
@@ -50,6 +57,7 @@ cd ~
 echo ""
 echo ""
 echo ""
+
 echo "Please set 'Hack Regular Nerd Font Complete Mono' as your terminal font."
 echo ""
 echo "Please use the following command:"
