@@ -1,0 +1,6 @@
+vcprompt
+bash
+fortune
+cowsay
+ffmpeg
+imagemagick
