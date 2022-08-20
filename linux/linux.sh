@@ -15,6 +15,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew install git
 brew install gh
 brew install fish
+brew install fisher
 brew install neovim
 brew install tmux
 brew install nvm
@@ -34,6 +35,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+# install fisher plugins
+
+fisher install jethrokuan/z
+
 # install node
 
 nvm install 18
@@ -44,16 +49,6 @@ nvm use 18
 
 npm install -g npm@latest
 npm install -g yarn typescript eslint ts-node lite-server gitignore license
-
-# set fish as default shell
-
-sudo echo /usr/local/bin/fish >> /etc/shells
-chsh -s /usr/local/bin/fish
-
-# install fisher and set it up
-
-curl -O https://raw.githubusercontent.com/jorgebucaran/fisher/HEAD/functions/fisher.fish | source fisher.fish && fisher install jorgebucaran/fisher
-fisher install jethrokuan/z
 
 # install nerd font
 
@@ -78,6 +73,6 @@ echo ""
 
 echo "Please set 'Hack Regular Nerd Font Complete Mono' as your terminal font."
 echo ""
-echo "Please use the following command:"
+echo "Please set fish as your default shell and use the following command:"
 echo "fisher install ilancosman/tide@v5"
 echo ""
