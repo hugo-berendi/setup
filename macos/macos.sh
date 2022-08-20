@@ -10,12 +10,12 @@ xcode-select --install
 
 # install homebrew formulae
 
-curl -O https://raw.githubusercontent.com/hugo-berendi/setup/main/macos/formulae.txt
+curl --silent -O https://raw.githubusercontent.com/hugo-berendi/setup/main/macos/formulae.txt
 xargs brew install < formulae.txt
 
 # install homebrew casks
 
-curl -O https://raw.githubusercontent.com/hugo-berendi/setup/main/macos/casks.txt
+curl --silent -O https://raw.githubusercontent.com/hugo-berendi/setup/main/macos/casks.txt
 xargs brew install < casks.txt
 
 
@@ -39,7 +39,7 @@ git config --global core.editor neovim
 
 # install node version manager
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/HEAD/install.sh | bash
+curl --silent -o- https://raw.githubusercontent.com/nvm-sh/nvm/HEAD/install.sh | bash
 
 nvm install 18
 
