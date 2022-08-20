@@ -3,12 +3,12 @@
 # find the os and install the installer
 
 case "$OSTYPE" in
-        solaris*) curl --silent -o- https://raw.githubusercontent.com/hugo-berendi/setup/main/linux.sh && bash linux.sh ;;
-        darwin*)  curl --silent -o- https://raw.githubusercontent.com/hugo-berendi/setup/main/macos/macos.sh && bash macos.sh ;; 
-        linux*)   curl --silent -o- https://raw.githubusercontent.com/hugo-berendi/setup/main/linux.sh && bash linux.sh ;;
-        bsd*)     curl --silent -o- https://raw.githubusercontent.com/hugo-berendi/setup/main/linux.sh && bash linux.sh ;;
-        msys*)    curl --silent -o- https://raw.githubusercontent.com/hugo-berendi/setup/main/windows/how.sh && bash how.sh ;;
-        cygwin*)  curl --silent -o- https://raw.githubusercontent.com/hugo-berendi/setup/main/windows/how.sh && bash how.sh ;;
+        solaris*) curl --silent -o- https://raw.githubusercontent.com/hugo-berendi/setup/main/linux.sh | bash ;;
+        darwin*)  curl --silent -o- https://raw.githubusercontent.com/hugo-berendi/setup/main/macos/macos.sh | bash ;; 
+        linux*)   curl --silent -o- https://raw.githubusercontent.com/hugo-berendi/setup/main/linux.sh | bash ;;
+        bsd*)     curl --silent -o- https://raw.githubusercontent.com/hugo-berendi/setup/main/linux.sh | bash ;;
+        msys*)    curl --silent -O https://raw.githubusercontent.com/hugo-berendi/setup/main/windows/windows.bat && ./windows.bat ;;
+        cygwin*)  curl --silent -O https://raw.githubusercontent.com/hugo-berendi/setup/main/windows/windows.bat && ./windows.bat ;;
         *)        echo "unknown: $OSTYPE" ;;
 esac
 
