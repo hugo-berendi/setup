@@ -7,8 +7,17 @@ sudo apt-get install build-essential procps curl file git
 
 # install homebrew formulae
 
-curl --silent -O https://raw.githubusercontent.com/hugo-berendi/setup/main/linux/formulae.txt
-xargs brew install < formulae.txt
+brew install git
+brew install gh
+brew install fish
+brew install neovim
+brew install tmux
+brew install node
+brew install vcprompt
+brew install fortune
+brew install cowsay
+brew install ffmpeg
+brew install imagemagick
 
 # end of the file
 
