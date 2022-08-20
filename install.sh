@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if [ "$OSTYPE" == "linux-gnu" ]; then
         curl --silent -o- https://raw.githubusercontent.com/hugo-berendi/setup/main/linux/linux.sh | bash
 fi
