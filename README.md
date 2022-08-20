@@ -4,7 +4,10 @@
 
 ### Installer
 ```sh
-curl --silent -o- https://raw.githubusercontent.com/hugo-berendi/setup/main/install.sh | bash
+sudo apt-get install dos2unix
+```
+```sh
+curl --silent -o- https://raw.githubusercontent.com/hugo-berendi/setup/main/install.sh | dos2unix | bash
 ```
 
 ### Installer for windows
