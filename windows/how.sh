@@ -4,8 +4,10 @@ echo "2. Install via bash script"
 echo "Enter your choice [1/2]: "
 read install_method
 
-case "$install_method" in
-        1*) echo "batch" ;;
-        2*) echo "bash script" ;;
-        *)        echo "unknown input: $OSTYPE" ;;
-esac
+if [ $install_method -eq 1 ]; then
+        echo "Installing via batch file"
+elif [ $install_method -eq 2 ]; then
+        echo "Installing via bash script"
+else
+        echo "Invalid choice"
+fi
