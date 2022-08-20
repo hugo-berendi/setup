@@ -2,7 +2,7 @@
 
 # install brew
 
-sudo apt-get install build-essential
+sudo apt-get install build-essential -y
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # set path for brew
